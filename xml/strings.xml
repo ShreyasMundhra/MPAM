@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">EditAppointment</string>
+
+    <string name="new_appt_date">Select Date</string>
+    <string name="new_appt_time">Select Time</string>
+    <string name="new_appt_type">Select Appointment Type</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="ENT_treatment">Ears, Nose, and Throat(ENT)</string>
+    <string name="dental_treatment">Dental</string>
+    <string name="women_health">Women Health</string>
+
+    <string name="confirm">Confirm</string>
+
+</resources>
