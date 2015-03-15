@@ -21,7 +21,7 @@ public class Appointment {
 		this.dateTime = dateTime;
 		this.specialty = specialty;
 		this.patient = patient;
-		preAppointmentActions = new ArrayList<String>();
+		this.preAppointmentActions = new ArrayList<String>();
 	}
 
 	public int getAppoinmentId() {

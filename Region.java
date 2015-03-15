@@ -8,9 +8,10 @@ public class Region {
 	private Country country;
 	private ArrayList<Clinic> clinics;
 	
-	public Region(String name){
+	public Region(String name, Country country){
 		this.name = name;
 		this.country = country;
+		this.country.addRegion(this);
 		this.clinics = new ArrayList<Clinic>(); 
 	}
 	
@@ -32,30 +33,26 @@ public class Region {
 	
 	public boolean addClinic(Clinic clinic) {
 		for (Clinic c: clinics){
-			c.getName().toLowerCase().equals(clinic.getName().toLowerCase());
-			System.out.println("Clinic already exists!");
-			return false;
+			if(c.getName().toLowerCase().equals(clinic.getName().toLowerCase())){
+				System.out.println("Clinic already exists!");
+				return false;
+			}
 		}
-		//if (findRegion(region)!= null){
-		//	System.out.println("Country already exists!");
-		//	return false;
-		//}
-		
 		return clinics.add(clinic);
 	};
 	
 	public boolean removeClinic(Clinic clinic){
 		for (Clinic c: clinics){
-			c.getName().toLowerCase().equals(clinic.getName().toLowerCase());
-			return clinics.remove(c);
+			if(c.getName().toLowerCase().equals(clinic.getName().toLowerCase()))
+				return clinics.remove(c);
 		}
 		return false;
 	};
 	
 	public Clinic findClinic(Clinic clinic){
 		for (Clinic c: clinics){
-			c.getName().toLowerCase().equals(clinic.getName().toLowerCase());
-			return c;
+			if(c.getName().toLowerCase().equals(clinic.getName().toLowerCase()))
+				return c;
 		}
 		return null;
 	}
@@ -66,8 +63,10 @@ public class Region {
 		if (clinics.size()==0)
 			System.out.println("      No branch available in this Region.\n");
 		else{
+			int i = 1;
 			for (Clinic c: clinics){
-				System.out.println("   " + c.getName());
+				System.out.print("      " + i++ + ". ");
+				System.out.println(c);
 			}
 		}
 	}
@@ -81,6 +80,6 @@ public class Region {
 		}
 	}*/
 	public String toString(){
-		return country.getName() + " - " + name;
+		return name + ", " + country.getName();
 	}
 }

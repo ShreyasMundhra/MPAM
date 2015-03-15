@@ -5,7 +5,7 @@ public class AccountManager {
 	private ArrayList<Account> accounts;
 	
 	public AccountManager() {
-		accounts = new ArrayList<Account>();
+		this.accounts = new ArrayList<Account>();
 	}
 	
 	public void validate(){

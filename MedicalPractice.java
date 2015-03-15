@@ -3,7 +3,6 @@ import java.util.ArrayList;
 public class MedicalPractice {
 	private String name;
 	private ArrayList<Country> countries;
-	private ArrayList<Region> regions;
 	private ArrayList<Doctor> doctors;
 	private ArrayList<Specialty> specialties;
 	
@@ -27,28 +26,51 @@ public class MedicalPractice {
 				System.out.println("Country already exists!");
 				return false;
 			}
-		}
-		//if (findRegion(region)!= null){
-		//	System.out.println("Country already exists!");
-		//	return false;
-		//}
-		
+		}		
 		return this.countries.add(country);
 	};
 	
 	public boolean removeCountry(Country country){
 		for (Country c: countries){
-			c.getName().toLowerCase().equals(country.getName().toLowerCase());
-			return countries.remove(c);
+			if(c.getName().toLowerCase().equals(country.getName().toLowerCase()))
+				return countries.remove(c);
 		}
 		return false;
 	};
 	
-	public Country findClinic(Country country){
+	public Country findCountry(Country country){
 		for (Country c: countries){
-			c.getName().toLowerCase().equals(country.getName().toLowerCase());
-			return c;
+			if(c.getName().toLowerCase().equals(country.getName().toLowerCase()))
+				return c;
 		}
+		return null;
+	}
+	
+	public boolean addSpecialty(Specialty specialty) {
+		for (Specialty s: specialties){
+			if (s.getName().toLowerCase().equals(specialty.getName().toLowerCase())){
+				System.out.println("Specialty "+ specialty.getName()+ " already exists!");
+				return false;
+			}
+		}
+		return specialties.add(specialty);
+	}
+	
+	public boolean removeSpecialty(Specialty specialty){
+		for (Specialty s: specialties){
+			s.getName().toLowerCase().equals(specialty.getName().toLowerCase());
+			return specialties.remove(s);
+		}
+		System.out.println("Specialty " + specialty.getName() + " does not exist!");
+		return false;
+	};
+	
+	public Specialty findSpecialty(Specialty specialty){
+		for (Specialty s: specialties){
+			s.getName().toLowerCase().equals(specialty.getName().toLowerCase());
+			return s;
+		}
+		System.out.println("Specialty " + specialty.getName() + " does not exist!");
 		return null;
 	}
 	
@@ -76,8 +98,29 @@ public class MedicalPractice {
 				}
 			}
 		}
-		System.out.println("====================== Medical Practice MPAMS  ======================");
 	}
+	
+	public void printAllSpecialties(){
+		System.out.println("====== List of Specialties ======\n");
+		
+		for (Specialty s: specialties){
+			System.out.println(s.getName());
+		}
+		System.out.println();
+	}
+	
+	public void printAllServices(){
+		System.out.println("====== List of All Medical Services ======\n");
+		
+		for (Specialty s: specialties){
+			s.printServices();
+		}
+	}
+	
+	public void printServiceBySpecialty(Specialty specialty){
+		specialty.printServices();
+	}
+	
 	public void printCountries(){
 		for (Country c: countries){
 			System.out.println(c.getName());

@@ -10,9 +10,10 @@ public class Country {
 	private String name;
 	private ArrayList<Region> regions;
 	
-	public Country(String name){
+	public Country(String name, MedicalPractice medicalPractice){
 		this.name = name;
 		this.countryId++;
+		medicalPractice.addCountry(this);
 		this.regions = new ArrayList<Region>();
 	}
 	
@@ -38,29 +39,31 @@ public class Country {
 		//	return false;
 		//}
 		for (Region r: regions){
-			r.getName().toLowerCase().equals(region.getName().toLowerCase());
-			System.out.println("Region already exists!");
-			return false;
+			if(r.getName().toLowerCase().equals(region.getName().toLowerCase())){
+				System.out.println("Region already exists!");
+				return false;
+			}
 		}
 		//if (findRegion(region)!= null){
 		//	System.out.println("Country already exists!");
 		//	return false;
 		//}
+		
 		return regions.add(region);
 	}
 	
 	public Region findRegion(Region region){
 		for (Region r: regions){
-			r.getName().toLowerCase().equals(region.getName().toLowerCase());
-			return r;
+			if(r.getName().toLowerCase().equals(region.getName().toLowerCase()))
+				return r;
 		}
 		return null;
 	}
 
 	public boolean removeRegion(Region region){
 		for (Region r: regions){
-			r.getName().toLowerCase().equals(region.getName().toLowerCase());
-			return regions.remove(r);
+			if(r.getName().toLowerCase().equals(region.getName().toLowerCase()))
+				return regions.remove(r);
 		}
 		return false;
 	}

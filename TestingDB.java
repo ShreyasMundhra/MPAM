@@ -42,30 +42,54 @@ public class TestingDB {
 		
 		//Create Country
 		//IMPT: every Country created must be added to Medical Practice
-		Country malay = new Country("Malaysia");
-		mp.addCountry(malay);
-		Country thai = new Country("Thailand");
-		mp.addCountry(thai);
-		Country sing = new Country("Singapore");
-		mp.addCountry(sing);
+		Country malay = new Country("Malaysia", mp);
+		Country thai = new Country("Thailand", mp);
+		Country sing = new Country("Singapore", mp);
+		
 		mp.printBranchAll();
 		
 		//Create Region
 		//IMPT: every region created must be added to Country
-		Region boonlay = new Region("Boonlay");
-		sing.addRegion(boonlay);
+		Region boonlay = new Region("Boonlay", sing);
 		mp.printBranchAll();
 		
 		//Create Specialty
-		Specialty ENT = new Specialty("ENT");
-		Specialty dental = new Specialty("Dental Service");
-		Specialty womenHealth = new Specialty("Women Health Services");
+		Specialty ENT = new Specialty("ENT", mp);
 		
+		//Add Services to the Specialty, here assumed every specialty will have 
+		//same services accross all medical practice
+		ENT.addService(new Service("Allergy Testing and Treatment"));
+		ENT.addService(new Service("Auditory Verbal Therapy"));
+		ENT.addService(new Service("Ear (Otology) and Dizziness"));
+		ENT.addService(new Service("Hearing Test"));
+		ENT.addService(new Service("Kids (Paediatric) ENT"));
+		ENT.addService(new Service("Multi-disciplinary Tumour Clinic"));
+		ENT.addService(new Service("Nasal and Sinus Surgery"));
+		ENT.addService(new Service("Obstructive Sleep Apnoea Assessment and Surgery"));
+		ENT.addService(new Service("Speech Therapy"));
+		ENT.addService(new Service("Thyroid Removal"));
+		//ENT.addService(new Service("Thyroid Removal"));
+		//ENT.printServices();
+		
+		Specialty dental = new Specialty("Dental Service", mp);
+		
+		//dental.printServices();
+		Specialty womenHealth = new Specialty("Women Health Services", mp);
+		//womenHealth.printServices();
+		
+		//Printing out
+		mp.printAllSpecialties();
+		mp.printAllServices();
+	
 		//Create Clinic
-		Clinic abc = new Clinic("ABC", "Healthy Street 101", boonlay );
+		Clinic abc = new Clinic("ABC Clinic", "Healthy Street 101", boonlay, 623326, 655555, "abclinic@MP.com");
+		System.out.printf(abc.toString());
+		//mp.printBranchAll();
+		
+		//Create Doctor
 		
 		//Create Patient
-		//Create Doctor
+		
 		//Create DoctorSchedule
 		//Create Treatment
 		
