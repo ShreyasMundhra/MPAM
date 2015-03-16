@@ -10,7 +10,8 @@ public class Clinic {
 	private int telNumber;
 	private int faxNumber;
 	private String email;
-	private HashMap<Calendar, Calendar> openTiming;
+	//private HashMap<Calendar, Calendar> openTiming;
+	private ArrayList<DoctorSchedule> doctorSchedules;
 	private ArrayList<Specialty> specialties;
 	private ArrayList<Doctor> doctors;
 	
@@ -22,7 +23,8 @@ public class Clinic {
 		this.telNumber = telNumber;
 		this.email = email;
 		this.specialties = new ArrayList<Specialty>();
-		this.openTiming = new HashMap<Calendar, Calendar>();
+		//this.openTiming = new HashMap<Calendar, Calendar>();
+		this.doctorSchedules = new ArrayList<DoctorSchedule>();
 		this.doctors = new ArrayList<Doctor>();
 		region.addClinic(this);
 	}
@@ -36,7 +38,8 @@ public class Clinic {
 		this.faxNumber = faxNumber;
 		this.email = email;
 		this.specialties = new ArrayList<Specialty>();
-		this.openTiming = new HashMap<Calendar, Calendar>();
+		//this.openTiming = new HashMap<Calendar, Calendar>();
+		this.doctorSchedules = new ArrayList<DoctorSchedule>();
 		this.doctors = new ArrayList<Doctor>();
 		region.addClinic(this);
 	}
@@ -97,17 +100,53 @@ public class Clinic {
 				return false;
 			}
 		}
+		//doctorschedule and specialties.add(specialty) succeed then return true
+		
+		//if (addDoctorSchedule(specialty))
+		//	if (specialties.add(specialty))
+		//		return true;
+		//else
+		//	return false;
+		//
+		
 		return specialties.add(specialty);
+	}
+	
+	public boolean addDoctorSchedule(Specialty specialty){
+		//day = monday;
+		
+		//for (day = monday; day <= saturday; day++){
+		//	for (startTime = 9; startTime <= 17; startTime+=3){
+		//		DoctorSchedule ds = new DoctorSchedule(this.clinic, specialty, day, startTime, startTime + 4);
+		//		if (!(doctorSchedules.add(ds))
+		//			return false;
+		//	}
+		//} 
+		return true;
 	}
 	
 	public boolean removeSpecialty(Specialty specialty){
 		for (Specialty s: specialties){
 			s.getName().toLowerCase().equals(specialty.getName().toLowerCase());
+			//if (removeDoctorSchedule)
+			//	if specialties.remove(s)
+			//		return true;
+			//else
+			//		return false;
 			return specialties.remove(s);
 		}
 		System.out.println("Specialty " + specialty.getName() + " does not exist!");
 		return false;
 	};
+	
+	public boolean removeDoctorSchedule(Specialty specialty){
+		for (DoctorSchedule ds: doctorSchedules){
+			if (ds.getSpecialty().equals(specialty))
+				if (!doctorSchedules.remove(ds))
+					return false;
+		}
+		return true;
+	}
 	
 	public Specialty findSpecialty(Specialty specialty){
 		for (Specialty s: specialties){
@@ -117,6 +156,11 @@ public class Clinic {
 		System.out.println("Specialty " + specialty.getName() + " does not exist!");
 		return null;
 	}
+	
+	public boolean findDoctorSchedule(){
+		return true;
+	}
+	
 	public String toString(){
 		String tabSpace = "      ";
 		if (faxNumber == 0)
