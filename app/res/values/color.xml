@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="theme_bg">#ff00bceb</color>
+    <color name="activity_bg">#41000000</color>
+
+    <color name="frame">#8c000000</color>
+</resources>
