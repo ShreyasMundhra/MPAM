@@ -21,12 +21,15 @@ public class Doctor {
 	public String getDoctorId() {
 		return doctorId;
 	}
+	
 	public void setDoctorId(String doctorId) {
 		this.doctorId = doctorId;
 	}
+	
 	public String getName() {
 		return name;
 	}
+	
 	public void setName(String name) {
 		this.name = name;
 	}
@@ -47,11 +50,8 @@ public class Doctor {
 	}
 	public boolean addDoctorSchedule(DoctorSchedule doctorSchedule) {
 		for (DoctorSchedule d: doctorSchedules){
-			if(d.equals(doctorSchedule)){
-				System.out.println("This schedule clash with existing schedule!");
-				System.out.println("Clash with this schedule: ");
-				System.out.println(d);
-				return false;
+			if(d.getDay().equals(doctorSchedule.getDay())){
+				System.out.println("Day clashes");
 			}
 		}
 		return doctorSchedules.add(doctorSchedule);
@@ -64,7 +64,6 @@ public class Doctor {
 		}
 		return false;
 	}
-	
 	public DoctorSchedule findDoctorSchedule(DoctorSchedule doctorSchedule){
 		for (DoctorSchedule d: doctorSchedules){
 			if(d.equals(doctorSchedule))

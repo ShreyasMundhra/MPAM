@@ -78,8 +78,8 @@ public class TestingDB {
 		//womenHealth.printServices();
 		
 		//Printing out
-		mp.printAllSpecialties();
-		mp.printAllServices();
+		//mp.printAllSpecialties();
+		//mp.printAllServices();
 	
 		//Create Clinic
 		Clinic abc = new Clinic("ABC Clinic", "Healthy Street 101", boonlay, 623326, 655555, "abclinic@MP.com");
@@ -87,6 +87,8 @@ public class TestingDB {
 		//mp.printBranchAll();
 		
 		//Create Doctor
+		//Doctor doc = new Doctor("A1", "Melissa",);
+		
 		
 		//Create Patient
 		
