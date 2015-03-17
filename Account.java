@@ -1,3 +1,5 @@
+package com.mycompany.cz2006;
+
 import java.lang.String;
 import java.util.Calendar;
 
@@ -7,16 +9,18 @@ public class Account {
 	private String name;
 	private String nric;
 	private String email;
-	private int phoneNumber;
+    private String phoneNumber;
 	private String gender;
 	private String address;
 	private String maritalStatus;
 	private Calendar dob;
 	private String citizenship;
 	private String countryOfResidence;
+
+    public  Account(){}
 	
 	public Account(String username, String password, String name, String nric,
-			String email, int phoneNumber, String gender, String address,
+			String email, String phoneNumber, String gender, String address,
 			String maritalStatus, Calendar dob, String citizenship,
 			String countryOfResidence) {
 		this.username = username;
@@ -73,11 +77,11 @@ public class Account {
 		this.email = email;
 	}
 
-	public int getPhoneNumber() {
+	public String getPhoneNumber() {
 		return phoneNumber;
 	}
 
-	public void setPhoneNumber(int phoneNumber) {
+	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
 

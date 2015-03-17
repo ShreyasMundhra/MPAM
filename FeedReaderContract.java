@@ -7,10 +7,10 @@ public class FeedReaderContract {
     // give it an empty constructor.
     public FeedReaderContract() {}
 
+
     /* Inner class that defines the table contents */
     public static abstract class FeedUserAccount implements BaseColumns {
-        public static final String TABLE_NAME = "User Account";
-        public static final String COLUMN_NAME_USER_ID = "userid";
+        public static final String TABLE_NAME = "User_Account";
         public static final String COLUMN_NAME_NAME = "name";
         public static final String COLUMN_NAME_NRIC = "nric";
         public static final String COLUMN_NAME_EMAIL = "email";
@@ -21,7 +21,8 @@ public class FeedReaderContract {
         public static final String COLUMN_NAME_MARITAL_STATUS = "maritalstatus";
         public static final String COLUMN_NAME_CITIZENSHIP = "citizenship";
         public static final String COLUMN_NAME_COUNTRY_OF_RESIDENCE = "countryofresidence";
-
+        public static final String COLUMN_NAME_USERNAME = "username";
+        public static final String COLUMN_NAME_PASSWORD = "password";
     }
 
 

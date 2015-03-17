@@ -9,10 +9,11 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class FeedReaderDbHelper extends SQLiteOpenHelper {
     private static final String TEXT_TYPE = " TEXT";
     private static final String COMMA_SEP = ",";
+    private static final int DATABASE_VERSION = 1;
+    private static final String DATABASE_NAME = "FeedReader.db";
     private static final String SQL_CREATE_USER_ACCOUNTS =
             "CREATE TABLE " + FeedReaderContract.FeedUserAccount.TABLE_NAME + " (" +
-                    FeedReaderContract.FeedUserAccount._ID + " INTEGER PRIMARY KEY," +
-                    FeedReaderContract.FeedUserAccount.COLUMN_NAME_USER_ID + TEXT_TYPE + COMMA_SEP +
+                    FeedReaderContract.FeedUserAccount._ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
                     FeedReaderContract.FeedUserAccount.COLUMN_NAME_NAME + TEXT_TYPE + COMMA_SEP +
                     FeedReaderContract.FeedUserAccount.COLUMN_NAME_NRIC + TEXT_TYPE + COMMA_SEP +
                     FeedReaderContract.FeedUserAccount.COLUMN_NAME_EMAIL + TEXT_TYPE + COMMA_SEP +
@@ -23,13 +24,14 @@ public class FeedReaderDbHelper extends SQLiteOpenHelper {
                     FeedReaderContract.FeedUserAccount.COLUMN_NAME_MARITAL_STATUS + TEXT_TYPE + COMMA_SEP +
                     FeedReaderContract.FeedUserAccount.COLUMN_NAME_CITIZENSHIP + TEXT_TYPE + COMMA_SEP +
                     FeedReaderContract.FeedUserAccount.COLUMN_NAME_COUNTRY_OF_RESIDENCE + TEXT_TYPE + COMMA_SEP +
-                    " )";
+                    FeedReaderContract.FeedUserAccount.COLUMN_NAME_USERNAME + TEXT_TYPE + COMMA_SEP +
+                    FeedReaderContract.FeedUserAccount.COLUMN_NAME_PASSWORD + TEXT_TYPE +
+                    " );";
 
     private static final String SQL_DELETE_USER_ACCOUNTS =
-            "DROP TABLE IF EXISTS " + FeedReaderContract.FeedUserAccount.TABLE_NAME;
+            "DROP TABLE IF EXISTS " + FeedReaderContract.FeedUserAccount.TABLE_NAME + ";";
     // If you change the database schema, you must increment the database version.
-    public static final int DATABASE_VERSION = 1;
-    public static final String DATABASE_NAME = "FeedReader.db";
+
 
     public FeedReaderDbHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
