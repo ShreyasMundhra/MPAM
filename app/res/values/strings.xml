@@ -3,7 +3,7 @@
 
     <string name="new_appt_date">Select Date</string>
     <string name="new_appt_time">Select Time</string>
-    <string name="new_appt_type">Select Appointment Type</string>
+    <string name="new_appt_type">Select Specialty</string>
 
     <string name="action_settings">Settings</string>
 
