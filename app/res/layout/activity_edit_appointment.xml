@@ -3,123 +3,171 @@
     android:layout_height="fill_parent"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingTop="?android:attr/actionBarSize"
-    android:paddingLeft="10dp"
-    android:paddingRight="10dp"
-    android:orientation= "vertical"
-    tools:context=".EditAppointmentActivity">
-
-
-
-    <TextView android:text="@string/new_appt_date"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="18dp"
-        android:id="@+id/select_date"
-        android:textSize="17sp"
-        android:textColor="@color/frame"/>
-
-    <DatePicker
-        android:id="@+id/dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"/>
-
-    <!--separator line-->
-    <View
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/frame"
-        android:layout_marginBottom="18dp"
-        android:layout_marginTop="5dp"/>
+        android:layout_height="match_parent"
+        android:paddingTop="?android:attr/actionBarSize"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:orientation= "vertical"
+        tools:context=".EditAppointmentActivity">
 
 
-    <TextView android:text="@string/new_appt_time"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/select_appointment_type"
-        android:textSize="17sp"
-        android:textColor="@color/frame"
-        android:spinnersShown="true"
-        android:calendarViewShown="false"
-        />
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
 
-    <TimePicker
-        android:id="@+id/tp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"/>
+            <TextView android:text="@string/new_appt_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:id="@+id/select_date"
+                android:textSize="17sp"
+                android:textColor="@color/frame"
+                android:layout_gravity="center_vertical"/>
 
-    <!--separator line-->
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/frame"
-        android:layout_marginBottom="18dp"
-        android:layout_marginTop="5dp"/>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="right">
 
-    <TextView android:text="@string/new_appt_type"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/select_type"
-        android:textSize="17sp"
-        android:textColor="@color/frame"/>
+                <DatePicker
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/datePicker"
+                    android:layout_gravity="center_horizontal"
+                    android:spinnersShown="true"
+                    android:calendarViewShown="false" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--separator line-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/frame"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"/>
+        <!---->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView android:text="@string/new_appt_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/select_appointment_type"
+                android:textSize="17sp"
+                android:textColor="@color/frame"
+                android:spinnersShown="true"
+                android:calendarViewShown="false"
+                android:layout_gravity="center_vertical"
+                />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="right">
+
+                <Spinner
+                    android:id="@+id/time_spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--separator line-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/frame"
+            android:layout_marginBottom="18dp"
+            android:layout_marginTop="5dp"/>
+        <!---->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView android:text="@string/new_appt_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/select_type"
+                android:textSize="17sp"
+                android:textColor="@color/frame"
+                android:layout_gravity="left"/>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right">
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ENT_treatment"
+                        android:id="@+id/radioButton1"
+
+                        android:textSize="14sp"
+                        android:textColor="@color/frame"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dental_treatment"
+                        android:id="@+id/radioButton2"
+
+                        android:textSize="14sp"
+                        android:textColor="@color/frame"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/women_health"
+                        android:id="@+id/radioButton3"
+
+                        android:textSize="14sp"
+                        android:textColor="@color/frame"/>
+
+                </RadioGroup>
+            </LinearLayout>
+        </LinearLayout>
 
 
-    <RadioGroup
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content">
+        <!--separator line-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/frame"
+            android:layout_marginBottom="18dp"
+            android:layout_marginTop="5dp"/>
+        <!---->
 
-        <RadioButton
+        <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/ENT_treatment"
-            android:id="@+id/radioButton1"
-            android:layout_marginLeft="55dp"
+            android:text="@string/confirm"
+            android:layout_gravity="center_horizontal"
             android:textSize="14sp"
-            android:textColor="@color/frame"/>
+            android:textColor="@color/frame"
+            android:background="@drawable/frame"
+            android:layout_marginBottom="10dp"/>
 
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/dental_treatment"
-            android:id="@+id/radioButton2"
-            android:layout_marginLeft="55dp"
-            android:textSize="14sp"
-            android:textColor="@color/frame"/>
-
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/women_health"
-            android:id="@+id/radioButton3"
-            android:layout_marginLeft="55dp"
-            android:textSize="14sp"
-            android:textColor="@color/frame"/>
-
-    </RadioGroup>
-
-    <!--separator line-->
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/frame"
-        android:layout_marginBottom="18dp"
-        android:layout_marginTop="5dp"/>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/confirm"
-        android:layout_gravity="center_horizontal"
-        android:textSize="14sp"
-        android:textColor="@color/frame"
-        android:background="@drawable/frame"
-        android:layout_marginBottom="10dp"/>
-
-</LinearLayout>
+    </LinearLayout>
 </ScrollView>
