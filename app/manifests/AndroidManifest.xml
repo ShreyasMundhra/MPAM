@@ -39,7 +39,7 @@
             android:parentActivityName=".Login" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.mycompany.cz2006.Login" />
+                android:value="com.djzass.medipoint.Login" />
         </activity>
         
     </application>
