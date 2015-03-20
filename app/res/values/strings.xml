@@ -36,4 +36,21 @@
         <item>20.30 - 21.00</item>
     </string-array>
 
+    <string name="title_activity_password_retriever">PasswordRetriever</string>
+    
+    <string name="title_activity_sign_up">SignUp</string>
+    
+    <string-array name="countries">
+        <item>Singapore</item>
+        <item>Malaysia</item>
+        <item>Thailand</item>
+    </string-array>
+    
+    <string-array name="sign_up1">
+        <item>name</item>
+        <item>NRIC</item>
+        <item>e-mail</item>
+        <item>contact no.</item>
+        <item>address</item>
+    </string-array>
 </resources>
