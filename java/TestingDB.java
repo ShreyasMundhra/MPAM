@@ -9,6 +9,7 @@ public class TestingDB {
 		char ch;
 		int n;
 		String name, address, region;
+		
 		ArrayList<Specialty> specialties = new ArrayList<Specialty>();
 		ArrayList<Doctor> doctors = new ArrayList<Doctor>();
 		//Adding country
@@ -83,16 +84,27 @@ public class TestingDB {
 	
 		//Create Clinic
 		Clinic abc = new Clinic("ABC Clinic", "Healthy Street 101", boonlay, 623326, 655555, "abclinic@MP.com");
-		System.out.printf(abc.toString());
+		System.out.println(abc);
 		//mp.printBranchAll();
 		
-		//Create Doctor
-		//Doctor doc = new Doctor("A1", "Melissa",);
-		
-		
-		//Create Patient
+		//Create Doctor		
+		Doctor doc = new Doctor("A1", "Melissa",ENT,10 );
+		System.out.println(doc);
 		
 		//Create DoctorSchedule
+		DoctorSchedule ds = new DoctorSchedule(abc, new Day(2), new TimeFrame(18, 26));
+		doc.printDoctorSchedule();
+		doc.addDoctorSchedule(ds);
+		doc.printDoctorSchedule();
+		
+		//Create Patient
+		Patient p = new Patient("angkasa10", "iluvsky", "Angkasa Raya", "A123", 
+				"angkasa10@gmail.com", 991122, "Male", "Skyline View 10", 
+				"single", "Singaporean", sing, "p1", 19);
+		//Check doctor schedule
+		//check patient appointment
+		//p.addAppointment(appointment);
+		
 		//Create Treatment
 		
 		//Print List of Medical Practice Branch (all 3 countries)
