@@ -1,4 +1,4 @@
-package com.mycompany.cz2006;
+package com.djzass.medipoint;
 
 import android.content.ContentValues;
 import android.content.Context;
