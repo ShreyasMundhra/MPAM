@@ -1,4 +1,4 @@
-package com.mycompany.cz2006;
+package com.djzass.medipoint;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
