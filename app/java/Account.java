@@ -21,7 +21,7 @@ public class Account {
 	
 	public Account(String username, String password, String name, String nric,
 			String email, String phoneNumber, String gender, String address,
-			String maritalStatus, String citizenship,
+			String maritalStatus, Calendar dob, String citizenship,
 			String countryOfResidence) {
 		this.username = username;
 		this.password = password;
@@ -32,7 +32,7 @@ public class Account {
 		this.gender = gender;
 		this.address = address;
 		this.maritalStatus = maritalStatus;
-		//this.dob = dob; have not been implemented
+		this.dob = dob;
 		this.citizenship = citizenship;
 		this.countryOfResidence = countryOfResidence;
 	}
@@ -125,11 +125,11 @@ public class Account {
 		this.citizenship = citizenship;
 	}
 
-	public Country getCountryOfResidence() {
+	public String getCountryOfResidence() {
 		return countryOfResidence;
 	}
 
-	public void setCountryOfResidence(Country countryOfResidence) {
+	public void setCountryOfResidence(String countryOfResidence) {
 		this.countryOfResidence = countryOfResidence;
 	}
 }
