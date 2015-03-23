@@ -15,7 +15,10 @@ import android.widget.Spinner;
 public class EditAppointmentActivity extends Activity implements AdapterView.OnItemSelectedListener {
 
     //time spinner
-    Spinner timeSpinner;
+    Spinner timeSpinner_edit;
+
+    //specialty spinner
+    Spinner specialtySpinner_edit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,11 +26,18 @@ public class EditAppointmentActivity extends Activity implements AdapterView.OnI
         setContentView(R.layout.activity_edit_appointment);
 
         //time spinner and array adapter
-        timeSpinner = (Spinner) findViewById(R.id.time_spinner);
+        timeSpinner_edit = (Spinner) findViewById(R.id.EditApptTimeSpinner);
         ArrayAdapter timeAdapter = ArrayAdapter.createFromResource(this, R.array.time_slot, android.R.layout.simple_spinner_dropdown_item);
         timeAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        timeSpinner.setAdapter(timeAdapter);
-        timeSpinner.setOnItemSelectedListener(this);
+        timeSpinner_edit.setAdapter(timeAdapter);
+        timeSpinner_edit.setOnItemSelectedListener(this);
+
+        //specialty spinner and array adapter
+        specialtySpinner_edit = (Spinner) findViewById(R.id.EditApptSpecialty);
+        ArrayAdapter specialtyAdapter_edit = ArrayAdapter.createFromResource(this, R.array.specialty, android.R.layout.simple_spinner_dropdown_item);
+        specialtyAdapter_edit.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        specialtySpinner_edit.setAdapter(specialtyAdapter_edit);
+        specialtySpinner_edit.setOnItemSelectedListener(this);
 
     }
 
