@@ -37,7 +37,7 @@
                 <DatePicker
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/datePicker"
+                    android:id="@+id/EditApptDatePicker"
                     android:layout_gravity="center_horizontal"
                     android:spinnersShown="true"
                     android:calendarViewShown="false" />
@@ -45,15 +45,6 @@
             </LinearLayout>
 
         </LinearLayout>
-
-        <!--separator line-->
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@color/frame"
-            android:layout_marginBottom="10dp"
-            android:layout_marginTop="10dp"/>
-        <!---->
 
         <LinearLayout
             android:layout_width="fill_parent"
@@ -78,7 +69,7 @@
                 android:gravity="right">
 
                 <Spinner
-                    android:id="@+id/time_spinner"
+                    android:id="@+id/EditApptTimeSpinner"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
 
@@ -86,87 +77,41 @@
 
         </LinearLayout>
 
-        <!--separator line-->
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@color/frame"
-            android:layout_marginBottom="18dp"
-            android:layout_marginTop="5dp"/>
-        <!---->
-
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal">
 
-            <TextView android:text="@string/new_appt_type"
+            <TextView android:text="@string/new_appt_specialty"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/select_type"
                 android:textSize="17sp"
                 android:textColor="@color/frame"
-                android:layout_gravity="left"/>
+                android:layout_gravity="center_vertical"/>
 
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:gravity="right">
 
-                <RadioGroup
+                <Spinner
+                    android:id="@+id/EditApptSpecialty"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="left">
+                    android:layout_height="wrap_content"/>
 
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/ENT_treatment"
-                        android:id="@+id/radioButton1"
-
-                        android:textSize="14sp"
-                        android:textColor="@color/frame"/>
-
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/dental_treatment"
-                        android:id="@+id/radioButton2"
-
-                        android:textSize="14sp"
-                        android:textColor="@color/frame"/>
-
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/women_health"
-                        android:id="@+id/radioButton3"
-
-                        android:textSize="14sp"
-                        android:textColor="@color/frame"/>
-
-                </RadioGroup>
             </LinearLayout>
         </LinearLayout>
 
-
-        <!--separator line-->
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@color/frame"
-            android:layout_marginBottom="18dp"
-            android:layout_marginTop="5dp"/>
-        <!---->
-
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/confirm"
             android:layout_gravity="center_horizontal"
             android:textSize="14sp"
-            android:textColor="@color/frame"
+            android:textColor="@color/button_font_color"
             android:background="@drawable/frame"
+            android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"/>
 
     </LinearLayout>
