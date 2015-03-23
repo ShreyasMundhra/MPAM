@@ -1,15 +1,18 @@
 <resources>
     <string name="app_name">MediPoint</string>
 
+    <!-- ======================EDIT APPOINTMENT RESOURCE==========================-->
     <string name="new_appt_date">Select Date</string>
     <string name="new_appt_time">Select Time</string>
-    <string name="new_appt_type">Select Specialty</string>
+    <string name="new_appt_specialty">Select Specialty</string>
 
     <string name="action_settings">Settings</string>
 
-    <string name="ENT_treatment">Ears, Nose, and Throat(ENT)</string>
-    <string name="dental_treatment">Dental</string>
-    <string name="women_health">Women Health</string>
+    <string-array name="specialty">
+        <item>Ears, Nose, and Throat(ENT)</item>
+        <item>Dental</item>
+        <item>Women Health</item>
+    </string-array>
 
     <string name="confirm">Confirm</string>
 
@@ -35,17 +38,20 @@
         <item>20.00 - 20.30</item>
         <item>20.30 - 21.00</item>
     </string-array>
+    <!-- ========================================================================= -->
 
+
+    <!-- ======================LOGIN LOGOUT REGISTER RESOURCES====================== -->
     <string name="title_activity_password_retriever">PasswordRetriever</string>
-    
+
     <string name="title_activity_sign_up">SignUp</string>
-    
+
     <string-array name="countries">
         <item>Singapore</item>
         <item>Malaysia</item>
         <item>Thailand</item>
     </string-array>
-    
+
     <string-array name="sign_up1">
         <item>name</item>
         <item>NRIC</item>
@@ -53,4 +59,19 @@
         <item>contact no.</item>
         <item>address</item>
     </string-array>
+    <!-- ========================================================================= -->
+
+    <!-- ====================CREATE APPOINTMENT RESOURCES===========================-->
+    <string name="select_specialty">Select Specialty</string>
+    <string name="select_service">Select Service</string>
+    <string name="select_doctor">Select Doctor</string>
+    <string name="select_location">Select Location</string>
+    <string name="select_country">Select Country</string>
+    <string name="select_time">Select Time</string>
+    <string name="select_date">Select Date</string>
+
+    <string name="create_appointment">Create new appointment</string>
+    <string name="edit_appointment">Edit appointment</string>
+    <string name="cancel">Cancel</string>
+    <!-- ========================================================================= -->
 </resources>
