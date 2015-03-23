@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="?android:attr/actionBarSize"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:orientation= "vertical">
+
+    <!--list of specialties-->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/LabelSelectSpecialty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_vertical"
+            android:text="@string/select_specialty"
+            android:textSize="17sp"
+            android:textColor="@color/frame">
+        </TextView>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="right">
+
+            <Spinner
+                    android:id="@+id/CreateApptSpecialty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- list of services -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/LabelSelectService"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/select_service"
+            android:textSize="17sp"
+            android:textColor="@color/frame"/>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="right">
+
+            <Spinner
+                android:id="@+id/CreateApptServices"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--list of countries -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/LabelSelectCountry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/select_country"
+            android:textSize="17sp"
+            android:textColor="@color/frame"/>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="right">
+
+            <Spinner
+                android:id="@+id/CreateApptCountries"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--list of locations -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/LabelSelectLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/select_location"
+            android:textSize="17sp"
+            android:textColor="@color/frame"/>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="right">
+
+            <Spinner
+                android:id="@+id/CreateApptLocations"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--list of doctors -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/LabelSelectDoctor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/select_doctor"
+            android:textSize="17sp"
+            android:textColor="@color/frame"/>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="right">
+
+            <Spinner
+                android:id="@+id/CreateApptDoctors"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Date -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/LabelChooseDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/select_date"
+            android:textSize="17sp"
+            android:textColor="@color/frame"
+            android:layout_gravity="center_vertical"/>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="right">
+
+            <DatePicker
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/CreateApptDatePicker"
+                android:layout_gravity="center_horizontal"
+                android:spinnersShown="true"
+                android:calendarViewShown="false" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Time -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/LabelAppointmentTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/select_time"
+            android:textSize="17sp"
+            android:textColor="@color/frame"
+            android:layout_gravity="center_vertical"/>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="right">
+
+            <Spinner
+                android:id="@+id/CreateApptTimeSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Buttons -->
+    <Button android:id="@+id/createAppointmentBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/create_appointment"
+        android:textSize="14sp"
+        android:textColor="@color/button_font_color"
+        android:background="@drawable/frame"/>
+
+    <Button android:id="@+id/cancelToHome"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/cancel"
+        android:textSize="14sp"
+        android:textColor="@color/button_font_color"
+        android:background="@drawable/frame"/>
+
+    </LinearLayout>
+
+</ScrollView>
+
