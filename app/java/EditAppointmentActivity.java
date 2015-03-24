@@ -89,15 +89,32 @@ public class EditAppointmentActivity extends Activity implements AdapterView.OnI
     }
 
     public void onConfirmEdit(View view){
+        //dialog box
+        Runnable r = new Runnable(){
+          public void run(){
+              backToMain();
+          }
+        };
+
+        String msg = "Are you sure you want to save the changes?";
+        AlertDialogInterface alert = new AlertDialogInterface("Confirmation" , msg, this);
+
+        alert.EditAppointmentConfirmed(r);
+        
+        
         //add to database
 
         //if successful
-        setContentView(R.layout.activity_main);
         Toast.makeText(this, "Appointment successfully edited", Toast.LENGTH_SHORT).show();
 
         //if not successful
         // Toast.makeText(this, "Failed to edit appointment, please try again", Toast.LENGTH_SHORT).show();
     }
 
+    //back to main activity
+    public void backToMain(){
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+        }
 }
 
