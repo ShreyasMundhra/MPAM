@@ -7,18 +7,20 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 /**
  * Created by Zillion Govin on 17/3/2015.
  */
 public class EditAppointmentActivity extends Activity implements AdapterView.OnItemSelectedListener {
 
-    //time spinner
+    //Spinner
     Spinner timeSpinner_edit;
-
-    //specialty spinner
     Spinner specialtySpinner_edit;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +43,6 @@ public class EditAppointmentActivity extends Activity implements AdapterView.OnI
 
     }
 
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -63,7 +64,6 @@ public class EditAppointmentActivity extends Activity implements AdapterView.OnI
         return super.onOptionsItemSelected(item);
     }
 
-
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
@@ -72,11 +72,32 @@ public class EditAppointmentActivity extends Activity implements AdapterView.OnI
          Toast.makeText(this, MyTime.getText() + " is selected", Toast.LENGTH_SHORT).show();
          **/
 
+
+
+
     }
 
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
 
     }
+
+    //Button Methods
+    public void onCancelEdit(View view){
+        setContentView(R.layout.activity_main);
+        Toast.makeText(this, "Appointment not edited", Toast.LENGTH_SHORT).show();
+    }
+
+    public void onConfirmEdit(View view){
+        //add to database
+
+        //if successful
+        setContentView(R.layout.activity_main);
+        Toast.makeText(this, "Appointment successfully edited", Toast.LENGTH_SHORT).show();
+
+        //if not successful
+        // Toast.makeText(this, "Failed to edit appointment, please try again", Toast.LENGTH_SHORT).show();
+    }
+
 }
 

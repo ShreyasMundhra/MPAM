@@ -2,9 +2,10 @@
     <string name="app_name">MediPoint</string>
 
     <!-- ======================EDIT APPOINTMENT RESOURCE==========================-->
-    <string name="new_appt_date">Select Date</string>
-    <string name="new_appt_time">Select Time</string>
-    <string name="new_appt_specialty">Select Specialty</string>
+    <string name="edit_date">Select Date</string>
+    <string name="edit_time">Select Time</string>
+    <string name="edit_specialty">Select Specialty</string>
+    <string name="edit_type">Select Type</string>
 
     <string name="action_settings">Settings</string>
 
@@ -42,9 +43,9 @@
 
 
     <!-- ======================LOGIN LOGOUT REGISTER RESOURCES====================== -->
-    <string name="title_activity_password_retriever">PasswordRetriever</string>
+    <string name="title_activity_password_retriever">Password Retriever</string>
 
-    <string name="title_activity_sign_up">SignUp</string>
+    <string name="title_activity_sign_up">Sign Up</string>
 
     <string-array name="countries">
         <item>Singapore</item>
@@ -70,8 +71,8 @@
     <string name="select_time">Select Time</string>
     <string name="select_date">Select Date</string>
 
-    <string name="create_appointment">Create new appointment</string>
-    <string name="edit_appointment">Edit appointment</string>
+    <string name="create_appointment">Create Appointment</string>
+    <string name="edit_appointment">Edit Appointment</string>
     <string name="cancel">Cancel</string>
     <!-- ========================================================================= -->
 </resources>
