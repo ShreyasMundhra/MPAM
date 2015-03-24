@@ -19,8 +19,8 @@ public class Appointment {
 			ArrayList<String> preAppointmentActions, Patient patient, TimeFrame timeFrame) {
 		this.appoinmentId = appoinmentId;
 		this.clinic = clinic;
-		this.doctor = doctor;
-		this.dateTime = dateTime;
+		this.doctor = doctor
+;		this.dateTime = dateTime;
 		this.specialty = specialty;
 		this.service = service;
 		this.patient = patient;

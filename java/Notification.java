@@ -5,7 +5,8 @@ public class Notification {
 	private Patient recipient;
 	private Calendar timeDate;
 	private Appointment appointment;
-	private String message;
+	
+	private String message="";
 	
 	public int getId() {
 		return id;
