@@ -12,8 +12,7 @@
     android:orientation="vertical"
     android:layout_gravity="center_vertical">
 
-
-    <!-- Service -->
+    <!-- Specialty -->
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="fill_parent"
@@ -23,14 +22,57 @@
         android:layout_marginBottom="20dp">
 
         <TextView
+            android:id="@+id/LabelAppointmentSpecialty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Specialty"
+            android:textSize="17sp"
+            android:textColor="@color/frame"
+            android:layout_weight="1">
+        </TextView>
+
+        <TextView
+            android:id="@id/SampleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ears, Nose, Throat (ENT)"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:textColor="@color/frame"
+            android:layout_weight="1"
+            android:gravity="right">
+        </TextView>
+
+    </LinearLayout>
+
+    <!-- Service -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp">
+
+        <TextView
             android:id="@+id/LabelAppointmentService"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Service"
             android:textSize="17sp"
-            android:textColor="@color/frame">
+            android:textColor="@color/frame"
+            android:layout_weight="1">
         </TextView>
 
+        <TextView
+            android:id="@id/SampleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Regular Check-up"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:textColor="@color/frame"
+            android:layout_weight="1"
+            android:gravity="right">
+        </TextView>
 
     </LinearLayout>
 
@@ -46,7 +88,20 @@
             android:layout_height="wrap_content"
             android:text="Date"
             android:textSize="17sp"
-            android:textColor="@color/frame">
+            android:textColor="@color/frame"
+            android:layout_weight="1">
+        </TextView>
+
+        <TextView
+            android:id="@id/SampleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="01 April 2015"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:textColor="@color/frame"
+            android:layout_weight="1"
+            android:gravity="right">
         </TextView>
 
     </LinearLayout>
@@ -63,7 +118,20 @@
             android:layout_height="wrap_content"
             android:text="Time"
             android:textSize="17sp"
-            android:textColor="@color/frame">
+            android:textColor="@color/frame"
+            android:layout_weight="1">
+        </TextView>
+
+        <TextView
+            android:id="@id/SampleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10.00 - 10.30"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:textColor="@color/frame"
+            android:layout_weight="1"
+            android:gravity="right">
         </TextView>
 
     </LinearLayout>
@@ -80,10 +148,53 @@
             android:layout_height="wrap_content"
             android:text="Location"
             android:textSize="17sp"
-            android:textColor="@color/frame">
+            android:textColor="@color/frame"
+            android:layout_weight="1">
         </TextView>
+
+        <TextView
+            android:id="@id/SampleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DJZASS Health Care Center"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:textColor="@color/frame"
+            android:layout_weight="1"
+            android:gravity="right">
+        </TextView>
+
     </LinearLayout>
 
+    <!-- Country -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp">
+        <TextView
+            android:id="@+id/LabelAppointmentCountry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Country"
+            android:textSize="17sp"
+            android:textColor="@color/frame"
+            android:layout_weight="1">
+        </TextView>
+
+        <TextView
+            android:id="@+id/SampleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Singapore"
+            android:textStyle="bold"
+            android:textSize="17sp"
+            android:textColor="@color/frame"
+            android:layout_weight="1"
+            android:gravity="right">
+        </TextView>
+
+    </LinearLayout>
 
     <!-- Buttons -->
     <Button android:id="@+id/ViewApptEdit"
