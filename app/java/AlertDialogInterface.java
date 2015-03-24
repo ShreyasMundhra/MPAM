@@ -16,10 +16,12 @@ public class AlertDialogInterface {
         dlgAlert.setCancelable(true);
     }
 
+    /*
     public void incompleteForm(){
         dlgAlert.setPositiveButton("OK", null);
         dlgAlert.create().show();
     }
+    */
 
     public void AccountCreated(final Runnable func){
         dlgAlert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
@@ -44,5 +46,12 @@ public class AlertDialogInterface {
         dlgAlert.create().show();
 
     }
+
+    /*
+    public void unequalPassword(){
+        dlgAlert.setPositiveButton("OK", null);
+        dlgAlert.create().show();
+    }
+    */
 
 }
