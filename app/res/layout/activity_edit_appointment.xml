@@ -13,11 +13,45 @@
         android:orientation= "vertical"
         tools:context=".EditAppointmentActivity">
 
-        <!-- select specialty -->
-        <TextView android:text="@string/edit_specialty"
+        <!-- select country -->
+        <TextView
+            android:id="@id/LabelSelectCountry"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
+            android:text="@string/select_country"
+            android:textSize="17sp"
+            android:textColor="@color/frame"/>
+
+        <Spinner
+            android:id="@+id/EditApptCountries"
+            style="@style/MySpinner"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="20dp"/>
+
+
+        <!--select location -->
+        <TextView
+            android:id="@+id/LabelSelectLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/select_location"
+            android:textSize="17sp"
+            android:textColor="@color/frame"/>
+
+        <Spinner
+            android:id="@+id/EditApptLocations"
+            style="@style/MySpinner"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- select specialty -->
+        <TextView
+            android:text="@string/select_specialty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:id="@+id/edit_specialty"
             android:textSize="17sp"
             android:textColor="@color/frame"/>
@@ -30,7 +64,7 @@
             android:layout_marginBottom="20dp"/>
 
         <!-- select type -->
-        <TextView android:text="@string/edit_type"
+        <TextView android:text="@string/select_service"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/edit_type"
@@ -45,7 +79,7 @@
             android:layout_marginBottom="20dp"/>
 
         <!-- Select time -->
-        <TextView android:text="@string/edit_time"
+        <TextView android:text="@string/select_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/edit_time"
@@ -62,7 +96,7 @@
             android:layout_marginBottom="20dp"/>
 
         <!-- Select Date -->
-        <TextView android:text="@string/edit_date"
+        <TextView android:text="@string/select_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/edit_date"

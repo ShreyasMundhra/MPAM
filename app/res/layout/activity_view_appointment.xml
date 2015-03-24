@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingRight="10dp"
+    android:paddingLeft="10dp"
+    android:orientation="vertical"
+    android:layout_gravity="center_vertical">
+
+
+    <!-- Service -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_paddingTop="?android:attr/actionBarSize"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp">
+
+        <TextView
+            android:id="@+id/LabelAppointmentService"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Service"
+            android:textSize="17sp"
+            android:textColor="@color/frame">
+        </TextView>
+
+
+    </LinearLayout>
+
+    <!-- Date -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp">
+        <TextView
+            android:id="@+id/LabelAppointmentDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date"
+            android:textSize="17sp"
+            android:textColor="@color/frame">
+        </TextView>
+
+    </LinearLayout>
+
+    <!-- Time -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp">
+        <TextView
+            android:id="@+id/LabelAppointmentTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Time"
+            android:textSize="17sp"
+            android:textColor="@color/frame">
+        </TextView>
+
+    </LinearLayout>
+
+    <!-- Location -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp">
+        <TextView
+            android:id="@+id/LabelAppointmentLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Location"
+            android:textSize="17sp"
+            android:textColor="@color/frame">
+        </TextView>
+    </LinearLayout>
+
+
+    <!-- Buttons -->
+    <Button android:id="@+id/ViewApptEdit"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="@string/view_edit"
+        android:textColor="@color/button_font_color"
+        android:background="@drawable/frame"/>
+
+    <Button android:id="@+id/ViewApptDelete"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/button_font_color"
+        android:background="@drawable/frame"
+        android:text="@string/view_delete"/>
+
+</LinearLayout>
+
+</ScrollView>
+
