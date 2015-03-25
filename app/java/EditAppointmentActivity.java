@@ -1,6 +1,8 @@
 package com.djzass.medipoint;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -19,7 +21,7 @@ public class EditAppointmentActivity extends Activity implements AdapterView.OnI
     //Spinner
     Spinner timeSpinner_edit;
     Spinner specialtySpinner_edit;
-
+    Spinner countrySpinner_edit;
 
 
     @Override
@@ -40,6 +42,13 @@ public class EditAppointmentActivity extends Activity implements AdapterView.OnI
         specialtyAdapter_edit.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         specialtySpinner_edit.setAdapter(specialtyAdapter_edit);
         specialtySpinner_edit.setOnItemSelectedListener(this);
+
+        //country spinner and array adapter
+        countrySpinner_edit = (Spinner) findViewById(R.id.EditApptCountries);
+        ArrayAdapter countryAdapter_edit = ArrayAdapter.createFromResource(this, R.array.countries, android.R.layout.simple_spinner_dropdown_item);
+        countryAdapter_edit.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        countrySpinner_edit.setAdapter(countryAdapter_edit);
+        countrySpinner_edit.setOnItemSelectedListener(this);
 
     }
 
@@ -87,16 +96,33 @@ public class EditAppointmentActivity extends Activity implements AdapterView.OnI
         setContentView(R.layout.activity_main);
         Toast.makeText(this, "Appointment not edited", Toast.LENGTH_SHORT).show();
     }
-
     public void onConfirmEdit(View view){
+
+        //dialog box
+        Runnable r = new Runnable(){
+          public void run(){
+              backToMain();
+          }
+        };
+
+        String msg = "Are you sure you want to save the changes?";
+        AlertDialogInterface alert = new AlertDialogInterface("Confirmation" , msg, this);
+
+        alert.EditAppointmentConfirmed(r);
+
         //add to database
 
         //if successful
-        setContentView(R.layout.activity_main);
         Toast.makeText(this, "Appointment successfully edited", Toast.LENGTH_SHORT).show();
 
         //if not successful
         // Toast.makeText(this, "Failed to edit appointment, please try again", Toast.LENGTH_SHORT).show();
+    }
+
+    //back to main activity
+    public void backToMain(){
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 
 }

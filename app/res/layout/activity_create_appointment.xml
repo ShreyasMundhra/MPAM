@@ -12,14 +12,47 @@
     android:paddingTop="?android:attr/actionBarSize"
     android:paddingLeft="10dp"
     android:paddingRight="10dp"
-    android:orientation= "vertical">
+    android:orientation="vertical">
+
+    <!--list of countries -->
+    <TextView
+        android:id="@+id/LabelSelectCountry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/select_country"
+        android:textSize="17sp"
+        android:textColor="@color/frame"/>
+
+    <Spinner
+        android:id="@+id/CreateApptCountries"
+        style="@style/MySpinner"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="20dp"/>
+
+
+    <!--list of locations -->
+    <TextView
+        android:id="@+id/LabelSelectLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/select_location"
+        android:textSize="17sp"
+        android:textColor="@color/frame"/>
+
+    <Spinner
+        android:id="@+id/CreateApptLocations"
+        style="@style/MySpinner"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="20dp"/>
 
     <!--list of specialties-->
     <TextView
         android:id="@+id/LabelSelectSpecialty"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
         android:layout_gravity="center_vertical"
         android:text="@string/select_specialty"
         android:textSize="17sp"
@@ -44,39 +77,6 @@
 
     <Spinner
         android:id="@+id/CreateApptServices"
-        style="@style/MySpinner"
-        android:layout_width="fill_parent"
-        android:layout_height="50dp"
-        android:layout_marginBottom="20dp"/>
-
-    <!--list of countries -->
-    <TextView
-        android:id="@+id/LabelSelectCountry"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/select_country"
-        android:textSize="17sp"
-        android:textColor="@color/frame"/>
-
-    <Spinner
-        android:id="@+id/CreateApptCountries"
-        style="@style/MySpinner"
-        android:layout_width="fill_parent"
-        android:layout_height="50dp"
-        android:layout_marginBottom="20dp"/>
-
-
-    <!--list of locations -->
-    <TextView
-        android:id="@+id/LabelSelectLocation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/select_location"
-        android:textSize="17sp"
-        android:textColor="@color/frame"/>
-
-    <Spinner
-        android:id="@+id/CreateApptLocations"
         style="@style/MySpinner"
         android:layout_width="fill_parent"
         android:layout_height="50dp"
