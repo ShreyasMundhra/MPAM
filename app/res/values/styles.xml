@@ -11,8 +11,12 @@
     <style name="MyActionBar"
         parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
         <item name="android:background">@color/theme_bg</item>
-
-
     </style>
+
+    <!--dropdown menu style-->
+    <style name="MySpinner"
+        parent="@android:style/Widget.Spinner.DropDown">
+    </style>
+
 
 </resources>
